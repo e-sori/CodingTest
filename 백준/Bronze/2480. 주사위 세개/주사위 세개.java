@@ -10,6 +10,8 @@ public class Main {
         int num2 = scan.nextInt();
         int num3 = scan.nextInt();
 
+        // 배열 : 길이가 정해져 있을 때
+        // List & ArrayList : 길이를 모를 때
         int[] arrNum = new int[] {num1,num2,num3};
         List<Integer> selectNum = new ArrayList<Integer>();
         int maxNum = arrNum[0];
