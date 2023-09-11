@@ -18,11 +18,12 @@ public class Main{
         	int repeatNum = Integer.valueOf(st.nextToken());
         	String repeatStr = st.nextToken();
         	
-        	for(int j = 0; j < repeatStr.length(); j += 1) {
-        		String c = String.valueOf(repeatStr.charAt(j));
-        		bw.write(c.repeat(repeatNum));
+        	
+        	for(char c : repeatStr.toCharArray()) {
+        		String sToc = String.valueOf(c);
+        		bw.write(sToc.repeat(repeatNum));
         	}
-            bw.write("\n");
+        	bw.write("\n");
         }
         bw.flush();
         bw.close();
