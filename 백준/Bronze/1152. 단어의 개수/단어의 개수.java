@@ -11,18 +11,10 @@ public class Main{
         BufferedWriter bw = new BufferedWriter (new OutputStreamWriter(System.out));
         
         String inputStr = br.readLine();
-        
-        int count = 0;
-        
         StringTokenizer st = new StringTokenizer(inputStr);
+        int count = st.countTokens();
         
-        while(st.hasMoreTokens()) {
-        	st.nextToken();
-        	count += 1;
-        }
-        
-        bw.write(String.valueOf(count));
-        
+        bw.write(String.valueOf(count));        
 
         bw.flush();
         bw.close();
