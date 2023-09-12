@@ -11,11 +11,21 @@ public class Main{
         BufferedWriter bw = new BufferedWriter (new OutputStreamWriter(System.out));
         
         StringTokenizer st = new StringTokenizer(br.readLine());
-        StringBuilder oriNum1 = new StringBuilder(st.nextToken());
-        StringBuilder oriNum2 = new StringBuilder(st.nextToken());
-                
-        int newNum1 = Integer.valueOf(oriNum1.reverse().toString());
-        int newNum2 = Integer.valueOf(oriNum2.reverse().toString());
+        int oriNum1 = Integer.valueOf(st.nextToken());
+        int oriNum2 = Integer.valueOf(st.nextToken());
+        
+        int newNum1 = 0;
+        int newNum2 = 0;
+        
+        while(oriNum1 != 0) {
+        	newNum1 = (newNum1 * 10) + (oriNum1 % 10);
+        	oriNum1 /= 10;
+        }
+        
+        while(oriNum2 != 0) {
+        	newNum2 = (newNum2 * 10) + (oriNum2 % 10);
+        	oriNum2 /= 10;
+        }
         
         int bigNum = newNum1 > newNum2 ? newNum1 : newNum2;
         
